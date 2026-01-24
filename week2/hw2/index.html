@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Jonas Marcial | UHMC Student & IT</title>
+    <meta
+      name="description"
+      content="Jonas Marcial — UHMC student studying Applied Business & IT in Kahului, Hawaii. Interests: gym, piano, cooking. Links + contact."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="#" />
+
+    <!-- Performance: preconnect (optional) -->
+    <link rel="preconnect" href="https://www.instagram.com" crossorigin />
+
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+
+  <body>
+    <main class="page">
+      <section class="card" itemscope itemtype="https://schema.org/Person">
+        <header class="header">
+          <img
+            class="avatar"
+            src="assets/jonas_individual.jpg"
+            alt="Photo of Jonas Marcial"
+            width="92"
+            height="92"
+            loading="lazy"
+            decoding="async"
+            itemprop="image"
+          />
+
+          <div class="title">
+            <h1 itemprop="name">Jonas Marcial</h1>
+            <p class="headline" itemprop="affiliation">
+              University of Hawaii Maui College • Kahului, Hawaii
+            </p>
+          </div>
+
+          <div class="badges" aria-label="Highlights">
+            <span class="badge">🎓 Student</span>
+            <span class="badge">💪 Gym</span>
+            <span class="badge">🧑‍💻 IT Specialist</span>
+          </div>
+        </header>
+
+        <section class="about">
+          <h2>About</h2>
+          <p itemprop="description">
+            I'm majoring in Applied Business and Information Technology and focusing more on
+            the technology side of it. I currently work as a porter for Hawaiian Airlines.
+            I enjoy going to the gym, playing the piano, and cooking.
+          </p>
+        </section>
+
+        <section class="grid">
+          <div class="panel">
+            <h2>Now</h2>
+            <ul>
+              <li><strong>Working on:</strong> PC building</li>
+              <li><strong>Learning:</strong> Programming and Database Administration</li>
+              <li>
+                <strong>Goal:</strong> I plan to move to the mainland after I graduate because I like the vibe
+                there right now, but Maui will always be home.
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h2>Skills</h2>
+            <ul class="chips">
+              <li class="chip">Customer service</li>
+              <li class="chip">HTML, CSS, & JS basics</li>
+              <li class="chip">Culinary</li>
+              <li class="chip">Fitness</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="links" aria-label="Links">
+          <h2>Links</h2>
+
+          <a class="link" href="https://www.instagram.com/jonas.marcial/" target="_blank" rel="noreferrer">
+            <span class="link-left">
+              <span class="link-icon" aria-hidden="true">📸</span>
+              <span class="link-text">
+                <strong>Instagram</strong>
+                <small>@jonas.marcial</small>
+              </span>
+            </span>
+            <span class="link-right" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link" href="mailto:jmarcial@hawaii.edu" itemprop="email">
+            <span class="link-left">
+              <span class="link-icon" aria-hidden="true">✉️</span>
+              <span class="link-text">
+                <strong>Email</strong>
+                <small>jmarcial@hawaii.edu</small>
+              </span>
+            </span>
+            <span class="link-right" aria-hidden="true">→</span>
+          </a>
+        </section>
+
+        <!-- Contact Form (HTML5 validation) -->
+        <section class="contact" aria-label="Contact form">
+          <h2>Contact</h2>
+
+          <form class="form" action="#" method="post" novalidate>
+            <div class="form-grid">
+              <label class="field">
+                <span class="label">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="60"
+                  placeholder="Your name"
+                />
+                <small class="hint">Required (2–60 characters)</small>
+              </label>
+
+              <label class="field">
+                <span class="label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@example.com"
+                />
+                <small class="hint">Required (must be a valid email)</small>
+              </label>
+
+              <label class="field field-full">
+                <span class="label">Subject</span>
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  minlength="3"
+                  maxlength="80"
+                  placeholder="What’s this about?"
+                />
+              </label>
+
+              <label class="field field-full">
+                <span class="label">Message</span>
+                <textarea
+                  name="message"
+                  required
+                  minlength="10"
+                  maxlength="600"
+                  placeholder="Write your message..."
+                ></textarea>
+                <small class="hint">Required (10–600 characters)</small>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">
+                This form uses HTML5 validation (required fields, email format, min/max length).
+              </p>
+            </div>
+          </form>
+        </section>
+
+        <footer class="footer">
+          <p>© <span id="year"></span> <span itemprop="name">Jonas Marcial</span></p>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
