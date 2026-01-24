@@ -196,3 +196,115 @@
                 <strong>Instagram</strong>
                 <small>@jonas.marcial</small>
               </span>
+            </span>
+            <span class="link-right" aria-hidden="true">↗</span>
+          </a>
+
+          <a class="link" href="mailto:jmarcial@hawaii.edu" itemprop="email">
+            <!--
+              mailto: opens the user’s email app.
+            -->
+            <span class="link-left">
+              <span class="link-icon" aria-hidden="true">✉️</span>
+              <span class="link-text">
+                <strong>Email</strong>
+                <small>jmarcial@hawaii.edu</small>
+              </span>
+            </span>
+            <span class="link-right" aria-hidden="true">→</span>
+          </a>
+        </section>
+
+        <!-- Contact Form (HTML5 validation) -->
+        <section class="contact" aria-label="Contact form">
+          <h2>Contact</h2>
+
+          <form class="form" action="#" method="post" novalidate>
+            <!--
+              The form collects user input.
+              HTML5 validation is handled by attributes like required.
+            -->
+
+            <div class="form-grid">
+              <!--
+                Grid layout for form fields.
+              -->
+
+              <label class="field">
+                <span class="label">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  minlength="2"
+                  maxlength="60"
+                  placeholder="Your name"
+                />
+                <small class="hint">Required (2–60 characters)</small>
+              </label>
+
+              <label class="field">
+                <span class="label">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@example.com"
+                />
+                <small class="hint">Required (must be a valid email)</small>
+              </label>
+
+              <label class="field field-full">
+                <span class="label">Subject</span>
+                <input
+                  type="text"
+                  name="subject"
+                  required
+                  minlength="3"
+                  maxlength="80"
+                  placeholder="What’s this about?"
+                />
+              </label>
+
+              <label class="field field-full">
+                <span class="label">Message</span>
+                <textarea
+                  name="message"
+                  required
+                  minlength="10"
+                  maxlength="600"
+                  placeholder="Write your message..."
+                ></textarea>
+                <small class="hint">Required (10–600 characters)</small>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <!--
+                Submit button and form note.
+              -->
+              <button class="btn" type="submit">Send</button>
+              <p class="form-note">
+                This form uses HTML5 validation (required fields, email format, min/max length).
+              </p>
+            </div>
+          </form>
+        </section>
+
+        <footer class="footer">
+          <!--
+            Footer appears at the bottom of the card.
+          -->
+          <p>© <span id="year"></span> <span itemprop="name">Jonas Marcial</span></p>
+        </footer>
+      </section>
+    </main>
+
+    <script>
+      // JavaScript that automatically updates the year in the footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
