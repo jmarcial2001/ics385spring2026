@@ -1,0 +1,555 @@
+/* 
+  =========================
+  CSS VARIABLES (THEME)
+  =========================
+  :root is like the “global settings” for your whole page.
+  Anything you define here can be reused anywhere with var(--name).
+*/
+:root {
+  /* Background color for the whole page */
+  --bg: #070b14;
+
+  /* These are soft “glow” colors used in the radial gradients */
+  --glow-1: rgba(106, 60, 255, 0.18);
+  --glow-2: rgba(0, 214, 255, 0.14);
+  --glow-3: rgba(255, 92, 189, 0.10);
+
+  /* Semi-transparent “glass” colors for the card/panels/inputs */
+  --card: rgba(255, 255, 255, 0.06);
+  --panel: rgba(255, 255, 255, 0.05);
+  --field: rgba(255, 255, 255, 0.07);
+
+  /* Text colors (white, but slightly transparent for a softer look) */
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.68);
+
+  /* Border line color (thin white line) */
+  --line: rgba(255, 255, 255, 0.12);
+
+  /* Shadow used for the main card */
+  --shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+
+  /* Border radius = how rounded corners are */
+  --radius: 22px;
+  --radius-sm: 14px;
+}
+
+/* 
+  =========================
+  RESET / GLOBAL DEFAULTS
+  =========================
+  This makes sizing more predictable.
+*/
+* { 
+  box-sizing: border-box; 
+}
+
+/* Make sure the page can fill the whole screen height */
+html, body { 
+  height: 100%; 
+}
+
+body {
+  /* Remove default browser spacing */
+  margin: 0;
+
+  /* Ensure the body always takes at least the full screen height */
+  min-height: 100vh;
+
+  /* Default font stack: uses system fonts (fast + clean) */
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+
+  /* Default text color */
+  color: var(--text);
+
+  /* Base background color */
+  background-color: var(--bg);
+
+  /* 
+    Background “glow” effect:
+    radial-gradient creates circular color fades.
+    Each gradient has:
+    - size (900px 550px)
+    - position (at 15% 10%)
+    - color (var(--glow-1))
+    - then fades to transparent
+  */
+  background-image:
+    radial-gradient(900px 550px at 15% 10%, var(--glow-1), transparent 60%),
+    radial-gradient(800px 500px at 90% 20%, var(--glow-2), transparent 55%),
+    radial-gradient(700px 450px at 50% 95%, var(--glow-3), transparent 55%);
+
+  /* Prevent repeating patterns */
+  background-repeat: no-repeat;
+
+  /* Keeps the glow “stuck” while the content scrolls */
+  background-attachment: fixed;
+}
+
+/* Make links inherit text color and remove underline by default */
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
+
+/* 
+  =========================
+  PAGE WRAPPER
+  =========================
+  This centers your card on the page.
+*/
+.page {
+  min-height: 100vh;
+
+  /* CSS Grid layout used for easy centering */
+  display: grid;
+
+  /* place-items centers both vertically and horizontally */
+  place-items: center;
+
+  /* Padding around the card so it doesn't touch screen edges */
+  padding: 28px 16px;
+}
+
+/* 
+  =========================
+  MAIN CARD
+  =========================
+  The main container that holds everything.
+*/
+.card {
+  /* The card width is either 820px, or 100% on small screens */
+  width: min(820px, 100%);
+
+  /* Slight gradient for a glass look */
+  background: linear-gradient(180deg, var(--card), rgba(255, 255, 255, 0.03));
+
+  /* Thin border line around the card */
+  border: 1px solid var(--line);
+
+  /* Rounded corners */
+  border-radius: var(--radius);
+
+  /* Drop shadow */
+  box-shadow: var(--shadow);
+
+  /* If something spills outside rounded corners, hide it */
+  overflow: hidden;
+}
+
+/* 
+  =========================
+  HEADER (GRID + FLEX)
+  =========================
+  Header contains avatar, title, and badges.
+*/
+.header {
+  /* Space inside header */
+  padding: 26px 24px 18px;
+
+  /* Grid makes it easy to reposition elements later (like for desktop) */
+  display: grid;
+
+  /* Gap between header items */
+  gap: 14px;
+
+  /* Divider line under header */
+  border-bottom: 1px solid var(--line);
+
+  /* Light header background fade */
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+}
+
+/* Avatar image styling */
+.avatar {
+  width: 92px;
+  height: 92px;
+
+  /* 999px makes a perfect circle */
+  border-radius: 999px;
+
+  /* Keeps image from stretching; it crops nicely */
+  object-fit: cover;
+
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Styles for the name */
+.title h1 {
+  font-size: 26px;
+  line-height: 1.15;
+
+  /* Remove default margin */
+  margin: 0;
+
+  /* Tight letter spacing looks modern */
+  letter-spacing: -0.02em;
+}
+
+/* The smaller headline under the name */
+.headline {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Badge container uses flex so badges sit in a row */
+.badges {
+  display: flex;
+  gap: 10px;
+
+  /* Allows badges to wrap on small screens */
+  flex-wrap: wrap;
+}
+
+/* Individual badge style */
+.badge {
+  font-size: 13px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+/* 
+  =========================
+  SECTION PADDING
+  =========================
+  Apply consistent spacing to main sections.
+*/
+.about, .grid, .links, .contact, .footer { 
+  padding: 18px 24px; 
+}
+
+/* Section titles (About, Skills, Contact, etc.) */
+.about h2, .grid h2, .links h2, .contact h2 {
+  margin: 0 0 10px;
+  font-size: 15px;
+
+  /* Slight spacing between letters (looks “clean”) */
+  letter-spacing: 0.02em;
+
+  /* Makes headings look like labels */
+  text-transform: uppercase;
+
+  color: var(--muted);
+}
+
+/* Paragraph text in About section */
+.about p {
+  margin: 0;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+/* 
+  =========================
+  GRID PANELS (ADVANCED LAYOUT)
+  =========================
+  .grid holds the "Now" and "Skills" panels.
+*/
+.grid {
+  display: grid;
+  gap: 14px;
+
+  /* On small screens, 1 column */
+  grid-template-columns: 1fr;
+}
+
+/* Each panel has its own background and border */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+}
+
+.panel ul {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.6;
+}
+
+/* 
+  =========================
+  SKILL CHIPS (FLEX)
+  =========================
+  Chips are the pill-shaped skill tags.
+*/
+.chips {
+  /* Remove default bullets */
+  list-style: none;
+
+  /* Remove default padding/margins */
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+
+  /* Allows chips to wrap to next line */
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--line);
+  font-size: 13px;
+}
+
+/* 
+  =========================
+  LINKS SECTION
+  =========================
+*/
+.links {
+  display: grid;
+  gap: 10px;
+
+  /* Divider line above links section */
+  border-top: 1px solid var(--line);
+
+  /* Slight background fade */
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.03));
+}
+
+/* Link “card” styling */
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+
+  /* Smooth hover animation */
+  transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+/* Hover effect when mouse is over the link */
+.link:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.075);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Left side: icon + text */
+.link-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  /* Allows text to shrink instead of overflowing */
+  min-width: 0;
+}
+
+/* Icon box */
+.link-icon {
+  width: 36px;
+  height: 36px;
+
+  /* Centers emoji inside */
+  display: grid;
+  place-items: center;
+
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--line);
+
+  /* Prevent icon from stretching */
+  flex: 0 0 auto;
+}
+
+/* Text stack (strong + small) */
+.link-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.link-text strong { 
+  font-size: 15px; 
+}
+
+/* Small text line (like username/email) */
+.link-text small {
+  font-size: 13px;
+  color: var(--muted);
+
+  /* If text is too long, cut it off with ... */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  /* Limit width so it stays tidy */
+  max-width: 46ch;
+}
+
+/* Right arrow styling */
+.link-right { 
+  color: var(--muted); 
+  font-size: 18px; 
+}
+
+/* 
+  =========================
+  CONTACT FORM
+  =========================
+*/
+.contact {
+  border-top: 1px solid var(--line);
+}
+
+/* Form layout spacing */
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+/* Grid for input fields */
+.form-grid {
+  display: grid;
+  gap: 12px;
+
+  /* On small screens: 1 column */
+  grid-template-columns: 1fr;
+}
+
+/* Each field: label + input + hint stacked */
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+/* The label text above inputs */
+.label {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Shared styles for input + textarea */
+input, textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+
+  border: 1px solid var(--line);
+  background: var(--field);
+  color: var(--text);
+
+  /* Removes the default blue outline (we handle focus styling below) */
+  outline: none;
+}
+
+textarea {
+  min-height: 120px;
+
+  /* Allow user to resize vertically (up/down), but not sideways */
+  resize: vertical;
+}
+
+/* When user clicks into input or textarea */
+input:focus, textarea:focus {
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+/* Hint text under fields */
+.hint {
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 12px;
+}
+
+/* Row that holds button + note */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  /* Wrap on small screens */
+  flex-wrap: wrap;
+}
+
+/* Button style */
+.btn {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--text);
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Hover effect for button */
+.btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* Small note beside/under the button */
+.form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* 
+  =========================
+  FOOTER
+  =========================
+*/
+.footer {
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 16px 24px 20px;
+}
+
+/* 
+  =========================
+  RESPONSIVE DESIGN
+  =========================
+  Media query: when the screen is at least 640px wide
+  (like tablets and desktops), adjust layout.
+*/
+@media (min-width: 640px) {
+  .header {
+    /* Header becomes a 2-column layout on larger screens */
+    grid-template-columns: auto 1fr;
+
+    /* Named areas make it easier to control layout */
+    grid-template-areas:
+      "avatar title"
+      "badges badges";
+
+    align-items: center;
+    column-gap: 18px;
+  }
+
+  /* Assign elements to the named grid areas */
+  .avatar { grid-area: avatar; }
+  .title { grid-area: title; }
+  .badges { grid-area: badges; }
+
+  /* Now and Skills panels become 2 columns */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Form becomes 2 columns (Name + Email side-by-side) */
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Fields marked .field-full span across both columns */
+  .field-full {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,0 +1,198 @@
+<!doctype html>
+<!--
+  This tells the browser that this document uses HTML5.
+  Always include this at the top of modern HTML files.
+-->
+<html lang="en">
+  <!--
+    The <html> tag wraps the entire page.
+    lang="en" helps browsers, screen readers, and search engines
+    understand that the page is written in English.
+  -->
+  <head>
+    <!--
+      <head> contains metadata (information about the page),
+      NOT content that appears on the screen.
+    -->
+
+    <meta charset="UTF-8" />
+    <!--
+      Sets the character encoding so special characters
+      (like emojis and symbols) display correctly.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Makes the page responsive on phones and tablets.
+      Without this, mobile layouts can look broken.
+    -->
+
+    <title>Jonas Marcial | UHMC Student & IT</title>
+    <!--
+      This is the text shown in the browser tab
+      and used by search engines.
+    -->
+
+    <meta
+      name="description"
+      content="Jonas Marcial — UHMC student studying Applied Business & IT in Kahului, Hawaii. Interests: gym, piano, cooking. Links + contact."
+    />
+    <!--
+      A short summary of the page.
+      Search engines may show this under your site in search results.
+    -->
+
+    <meta name="robots" content="index,follow" />
+    <!--
+      Tells search engines they are allowed to index this page
+      and follow the links on it.
+    -->
+
+    <link rel="canonical" href="#" />
+    <!--
+      Canonical URL helps prevent duplicate content issues for SEO.
+      This would normally point to your live page URL.
+    -->
+
+    <!-- Performance: preconnect (optional) -->
+    <link rel="preconnect" href="https://www.instagram.com" crossorigin />
+    <!--
+      Preconnect hints the browser to prepare a connection early,
+      which can slightly improve loading speed for external links.
+    -->
+
+    <link rel="stylesheet" href="stylesheet.css" />
+    <!--
+      Links this HTML file to your external CSS file.
+      All styling rules live there.
+    -->
+  </head>
+
+  <body>
+    <!--
+      <body> contains everything visible on the page.
+    -->
+
+    <main class="page">
+      <!--
+        <main> holds the main content of the page.
+        The class is used for styling with CSS.
+      -->
+
+      <section class="card" itemscope itemtype="https://schema.org/Person">
+        <!--
+          This section is the main card layout.
+          Schema.org markup helps search engines understand
+          that this page is about a person.
+        -->
+
+        <header class="header">
+          <!--
+            Header contains the profile image, name,
+            headline, and badges.
+          -->
+
+          <img
+            class="avatar"
+            src="assets/jonas_individual.jpg"
+            alt="Photo of Jonas Marcial"
+            width="92"
+            height="92"
+            loading="lazy"
+            decoding="async"
+            itemprop="image"
+          />
+          <!--
+            <img> displays your profile picture.
+            alt text is important for accessibility.
+            loading="lazy" improves performance.
+          -->
+
+          <div class="title">
+            <!--
+              Holds your name and school/location info.
+            -->
+            <h1 itemprop="name">Jonas Marcial</h1>
+            <p class="headline" itemprop="affiliation">
+              University of Hawaii Maui College • Kahului, Hawaii
+            </p>
+          </div>
+
+          <div class="badges" aria-label="Highlights">
+            <!--
+              Badges visually highlight key traits/interests.
+            -->
+            <span class="badge">🎓 Student</span>
+            <span class="badge">💪 Gym</span>
+            <span class="badge">🧑‍💻 IT Specialist</span>
+          </div>
+        </header>
+
+        <section class="about">
+          <!--
+            About section gives a short personal introduction.
+          -->
+          <h2>About</h2>
+          <p itemprop="description">
+            I'm majoring in Applied Business and Information Technology and focusing more on
+            the technology side of it. I currently work as a porter for Hawaiian Airlines.
+            I enjoy going to the gym, playing the piano, and cooking.
+          </p>
+        </section>
+
+        <section class="grid">
+          <!--
+            Grid layout that holds two panels side-by-side.
+          -->
+
+          <div class="panel">
+            <h2>Now</h2>
+            <ul>
+              <!--
+                Unordered list of current activities and goals.
+              -->
+              <li><strong>Working on:</strong> PC building</li>
+              <li><strong>Learning:</strong> Programming and Database Administration</li>
+              <li>
+                <strong>Goal:</strong> I plan to move to the mainland after I graduate because I like the vibe
+                there right now, but Maui will always be home.
+              </li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h2>Skills</h2>
+            <ul class="chips">
+              <!--
+                "Chips" are small pill-style labels for skills.
+              -->
+              <li class="chip">Customer service</li>
+              <li class="chip">HTML, CSS, & JS basics</li>
+              <li class="chip">Culinary</li>
+              <li class="chip">Fitness</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="links" aria-label="Links">
+          <!--
+            Section for external and contact links.
+          -->
+          <h2>Links</h2>
+
+          <a
+            class="link"
+            href="https://www.instagram.com/jonas.marcial/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <!--
+              Opens Instagram in a new tab.
+              rel="noreferrer" improves security.
+            -->
+            <span class="link-left">
+              <span class="link-icon" aria-hidden="true">📸</span>
+              <span class="link-text">
+                <strong>Instagram</strong>
+                <small>@jonas.marcial</small>
+              </span>
