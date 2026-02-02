@@ -9,3 +9,6 @@ This is the main page for Course ICS 385 Spring 2026.
 
 ## Week 3 - JavaScript
 - HW 1: Dicee Game - [dicee.html](week3/hw1/dicee.html), [styles.css](week3/hw1/styles.css), [index.js](week3/hw1/index.js)
+- HW 2: Simon Game - [index.html](week3/hw2/index.html), [styles.css](week3/hw2/styles.css), [game.js](week3/hw2/game.js)
+
+## Week 4 - 
