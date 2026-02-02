@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+  <h1 id="level-title">Welcome to Simon</h1>
+
+  <!-- helper text that changes for tutorial/game -->
+  <p class="instructions" id="helper-text">
+    Click "Start Tutorial" to learn, or press any key to skip and start playing.
+  </p>
+
+  <!-- I added volume controls because the game can get so loud-->
+  <div class="controls">
+    <label for="volume" class="volume-label">Volume</label>
+    <input id="volume" type="range" min="0" max="100" value="70">
+    <span id="volume-value">70%</span>
+  </div>
+
+  <!-- tutorial start -->
+  <button id="start-tutorial" class="start-btn">Start Tutorial</button>
+
+  <p class="best-score">Best Level: <span id="best-level">0</span></p>
+
+  <div class="container">
+    <div class="row">
+      <div type="button" id="green" class="btn green"></div>
+      <div type="button" id="red" class="btn red"></div>
+    </div>
+
+    <div class="row">
+      <div type="button" id="yellow" class="btn yellow"></div>
+      <div type="button" id="blue" class="btn blue"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+</body>
+
+</html>
