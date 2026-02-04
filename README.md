@@ -12,13 +12,13 @@ This is the main page for Course ICS 385 Spring 2026.
 - HW 2: Simon Game - [index.html](week3/hw2/index.html), [styles.css](week3/hw2/styles.css), [game.js](week3/hw2/game.js)
 
 ## Week 4 - NodeJS
-- HW 1: hero-hw4 - [app.js](app.js)
+- HW 1: hero-hw4 - [app.js](week4/app.js)
 Extends the in-class hero Node.js example by using five npm packages to generate content and save the results to text files.
-1. superheroes - [hero.txt](output/hero.txt)
-2. supervillains - [villain.txt](output/villain.txt)
-3. inspirational-quotes - [inspiration-quote.txt](output/inspiration-quote.txt)
-4. popular-movie-quotes - [popular-movie-quotes.txt](output/popular-movie-quotes.txt)
-5. famous-last-words - [famous-last-words.txt](output/famous-last-words.txt)
+1. superheroes - [hero.txt](week4/output/hero.txt)
+2. supervillains - [villain.txt](week4/output/villain.txt)
+3. inspirational-quotes - [inspiration-quote.txt](week4/output/inspiration-quote.txt)
+4. popular-movie-quotes - [popular-movie-quotes.txt](week4/output/popular-movie-quotes.txt)
+5. famous-last-words - [famous-last-words.txt](week4/output/famous-last-words.txt)
 
 - HW 2: QR Code
   
