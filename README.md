@@ -55,13 +55,53 @@ My manager asked me to make this code easier to use and safer.
 - Show a safety reminder to verify the domain before sharing
 
 4. AI Usage
-I used AI tools (ChatGPT / Codex-style help) to:
+I used AI tools to:
 - explain the code in beginner-friendly comments
 - suggest user-friendly features
 - help generate helper functions
 
 5. Tests
-(We will fill this after we finish coding and run test inputs.)
+Test 1: Basic URL without https  
+Input: `google.com`  
+Expected: Program auto-fixes to `https://google.com`, generates QR, saves files in output/  
+Result: PASS  
+Evidence: Created  
+- `output/google.com_<timestamp>.png`  
+- `output/google.com_<timestamp>.txt`  
+Also updated `history.json`
+
+Test 2: Full URL with https  
+Input: `https://www.google.com`  
+Expected: Accepts URL, generates QR, saves files  
+Result: PASS
+
+Test 3: Invalid URL  
+Input: `asdf`  
+Expected: Program rejects input and asks again  
+Result: PASS
+
+Test 4: Empty input  
+Input: (press Enter with nothing typed)  
+Expected: Program rejects input and asks again  
+Result: PASS
+
+Test 5: SVG output  
+Input: `google.com` then choose `svg`  
+Expected: Creates `.svg` file in output/  
+Result: PASS
+
 
 6. What I learned (Note to Manager)
+
+I learned how to take code that already exists, understand what each package does,
+and then extend it in a safe and user-friendly way.
+
+The original program worked, but it was easy for users to make mistakes (bad URLs,
+overwriting files, cluttered output). I improved it by validating input, auto-fixing
+missing https://, giving output format choices (png/svg), saving everything into an
+output folder, preventing overwrites, and logging a history.json file.
+
+I also learned how important it is to install dependencies in the correct project folder
+(using npm install) and how to document changes clearly so future developers can extend
+the project.
 
