@@ -1,6 +1,6 @@
 /*
 Name: Jonas Marcial
-Date: Feb 6, 2026
+Date: Feb 5, 2026
 
 Overview:
 This program creates a QR code from a URL entered by the user.
@@ -15,8 +15,7 @@ Key Highlights:
 - Demonstrates how Node.js packages work together
 
 AI Usage:
-Some comments and explanations were generated with AI assistance
-(ChatGPT / Codex-style tools) to improve readability and understanding.
+Some comments and explanations were generated with AI assistance to improve readability and understanding.
 */
 
 
