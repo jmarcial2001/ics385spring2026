@@ -35,17 +35,20 @@ Extends the in-class hero Node.js example by using five npm packages to generate
     ensureOutputDir()
     resolveNonOverwritePath(path)
     appendHistory(entry)
-    
+
+
 Improved the QR generator by validating URLs, fixing missing https, letting users pick PNG or SVG, saving output in an organized folder, preventing   overwrites, logging history, and showing a safety reminder. This project started from the Udemy QR Code Generator (Section 23.199). The original code asks the user for a URL, generates a QR image, and saves the URL into a text file. My manager asked me to make this code easier to use and safer.
 
-Original Code Summary
+Original Code Summary:
+
 Used inquirer to get a URL from the user in the terminal
 Used qr-image to generate a QR image
 Used fs to save:
 qr_img.png
 URL.txt
 
-New Design Goals
+New Design Goals:
+
 Validate URLs so users don’t generate broken QR codes
 Auto-add https:// when missing
 Let user choose output format (PNG or SVG)
@@ -54,7 +57,8 @@ Prevent overwriting files
 Save a history log (history.json)
 Show a safety reminder to verify the domain before sharing
 
-AI Usage
+AI Usage:
+
 I used AI tools to
 explain the code in beginner-friendly comments
 suggest user-friendly features
