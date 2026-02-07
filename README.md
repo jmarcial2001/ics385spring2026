@@ -18,7 +18,7 @@ This is the main page for Course ICS 385 Spring 2026.
 
 
 ## Week 4 - NodeJS
-#### - HW 1: hero-hw4 - [app.js](week4/hero-hw4/output/app.js)
+#### - HW 1: hero-hw4 - [app.js](week4/hero-hw4/app.js)
 Extends the in-class hero Node.js example by using five npm packages to generate content and save the results to text files.
 1. superheroes - [hero.txt](week4/hero-hw4/output/hero.txt)
 2. supervillains - [villain.txt](week4/hero-hw4/output/villain.txt)
