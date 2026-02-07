@@ -20,6 +20,7 @@ Extends the in-class hero Node.js example by using five npm packages to generate
 4. popular-movie-quotes - [popular-movie-quotes.txt](week4/output/popular-movie-quotes.txt)
 5. famous-last-words - [famous-last-words.txt](week4/output/famous-last-words.txt)
 
+
 - HW 2: QR Code
   Functions:
     normalizeUrl(input)
