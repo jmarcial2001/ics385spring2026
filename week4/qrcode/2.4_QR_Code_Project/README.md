@@ -1,4 +1,4 @@
-# QR Code Generator — Improved (Week4)
+# QR Code Generator (Week4)
 
 Overview
 - Author: Jonas Marcial
@@ -108,6 +108,3 @@ What I Learned from This Project (Notes for Manager)
 - The starter code from Udemy is really simple and easy to understand. My changes added useful features like picking file types and organizing files into a folder.
 - Breaking code into small helper functions (like normalizing URLs) makes the code much cleaner and less likely to have bugs.
 - Even small improvements like checking if a URL is valid before processing it make the app feel more professional.
-
-Contact / Reviewer
-- Requested by: Manager (assignment per instructions).
