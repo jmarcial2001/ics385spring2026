@@ -18,21 +18,33 @@ function renderF2CPage(fTemp = "", cTemp = "") {
   return html;
 }
 
-// Converts Fahrenheit -> centigrade as integers
+// Converts Fahrenheit to centigrade as integers
+// Input and output must be integers
 function convertF2CInt(fTempRaw) {
   const fInt = parseInt(fTempRaw, 10);
 
+
+  // Check if conversion failed (user entered invalid input)
   if (Number.isNaN(fInt)) {
+    // Return empty values so page doesn't break
     return { fInt: "", cInt: "" };
   }
 
+
+  // Apply temperature conversion formula
+  // (F - 32) * 5/9 = C
   const cFloat = (fInt - 32) * (5 / 9);
 
-  // Ensure integer output (truncate toward 0)
+  // Convert result to integer, remove decimals
+  // Ex: 37.7 → 37
   const cInt = parseInt(cFloat, 10);
 
+
+  // Return both values as an object
+  // This lets other files access both results easily
   return { fInt, cInt };
 }
 
+// Export functions for use in index.js
 module.exports = {renderF2CPage, convertF2CInt,
 };
