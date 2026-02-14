@@ -108,3 +108,33 @@ What I Learned from This Project (Notes for Manager)
 - The starter code from Udemy is really simple and easy to understand. My changes added useful features like picking file types and organizing files into a folder.
 - Breaking code into small helper functions (like normalizing URLs) makes the code much cleaner and less likely to have bugs.
 - Even small improvements like checking if a URL is valid before processing it make the app feel more professional.
+
+
+
+
+
+
+
+
+Other notes: 
+
+1. Original Code Summary:
+Used inquirer to get a URL from the user in the terminal
+Used qr-image to generate a QR image
+Used fs to save:
+qr_img.png
+URL.txt
+
+2. New Design Goals:
+Validate URLs so users don’t generate broken QR codes
+Auto-add https:// when missing
+Let user choose output format (PNG or SVG)
+Create an output/ folder to keep files organized
+Prevent overwriting files
+Save a history log (history.json)
+Show a safety reminder to verify the domain before sharing
+
+3. AI Usage:
+I used AI tools to
+suggest user-friendly features
+help generate helper functions
