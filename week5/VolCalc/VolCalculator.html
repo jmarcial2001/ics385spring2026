@@ -1,0 +1,50 @@
+<!-- Jonas Marcial, Feb 2026
+ ICS 385 Week 5 - Volume Cylinder -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volume Cylinder</title>
+  </head>
+
+  <body>
+    <h1>Volume Cylinder</h1>
+
+    <!-- sends data to server -->
+    <form action="/VolCalc" method="POST">
+
+      <label>Radius:</label><br /><br />
+      <input
+        type="number"
+        name="radius"
+        step="any"
+        value="{{RADIUS}}"
+        required
+      />
+      <br /><br />
+
+      <label>Height:</label><br /><br />
+      <input
+        type="number"
+        name="height"
+        step="any"
+        value="{{HEIGHT}}"
+        required
+      />
+      <br /><br />
+
+      <button type="submit">Calculate</button>
+      <br /><br />
+
+      <label>Volume:</label><br /><br />
+      <input
+        type="text"
+        value="{{VOLUME}}"
+        readonly
+      />
+
+    </form>
+  </body>
+</html>
