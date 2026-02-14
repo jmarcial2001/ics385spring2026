@@ -3,53 +3,68 @@
 
 <!-- Sorry about the messy html, please use text wrap -->
 
-
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>F2C Converter</title>
-        </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F2C Converter</title>
+  </head>
 
-    <body>
-        <h1>Fahrenheit to Centigrade Converter</h1>
+  <body>
+    <h1>Fahrenheit to Centigrade Converter</h1>
 
-            <!-- Get form. This one loads the page and accepts Farenheit input from user. router.get (/f2c) in calculator.js -->
-            <form action="/f2c" method="GET">
-                    <label for="fTemp"> Fahrenheit (integer):
-                    </label><br><br>
+    <!-- Get form. This one loads the page and accepts Farenheit input from user. router.get (/f2c) in calculator.js -->
+    <form action="/f2c" method="GET">
+      <label for="fTemp"> Fahrenheit (integer): </label><br /><br />
 
-                    <!-- type="number" allows only numbers, name="fTemp" is sent to the server. {{F_TEMP}} is filled by the server when page reloads -->
-                    <input type="number" id="fTemp" name="fTemp" step="1" value="{{F_TEMP}}"> <br><br>
+      <!-- type="number" allows only numbers, name="fTemp" is sent to the server. {{F_TEMP}} is filled by the server when page reloads -->
+      <input
+        type="number"
+        id="fTemp"
+        name="fTemp"
+        step="1"
+        value="{{F_TEMP}}"
+      />
+      <br /><br />
 
-                    <!-- This sends GET request -->
-                    <button type="submit">Load</button>
-            </form>
+      <!-- This sends GET request -->
+      <button type="submit">Load</button>
+    </form>
 
+    <hr />
 
-            <hr>
+    <!-- Post form. This one performs the conversion. Matches router.post(/f2c) -->
 
-            <!-- Post form. This one performs the conversion. Matches router.post(/f2c) -->
+    <form action="/f2c" method="POST">
+      <label for="fTempPost"> Fahrenheit (integer): </label> <br /><br />
 
-            <form action="/f2c" method="POST">
-                    <label for="fTempPost">
-                        Fahrenheit (integer):
-                    </label> <br><br>
+      <!-- User enters temperature here -->
+      <input
+        type="number"
+        id="fTempPost"
+        name="fTemp"
+        step="1"
+        value="{{F_TEMP}}"
+        required
+      />
+      <br /><br />
 
-                    <!-- User enters temperature here -->
-                    <input type="number" id="fTempPost" name="fTemp" step="1" value="{{F_TEMP}}" required> <br><br>
+      <!-- Button that sends data for conversion -->
+      <button type="submit">Convert</button> <br /><br />
 
-                    <!-- Button that sends data for conversion -->
-                    <button type="submit">Convert</button> <br><br>
+      <!-- Output here -->
+      <label for="cTemp"> Centigrade (integer): </label>
 
-                    <!-- Output here -->
-                    <label for="cTemp">
-                        Centigrade (integer):
-                    </label>
-
-                    <!-- {{C_TEMP}} is filled by the server after calculation readonly means user cannot edit result -->
-                    <input
-                        type="number" id="cTemp" name="cTemp" step="1" value="{{C_TEMP}}" readonly>
-            </form>
-    </body>
+      <!-- {{C_TEMP}} is filled by the server after calculation readonly means user cannot edit result -->
+      <input
+        type="number"
+        id="cTemp"
+        name="cTemp"
+        step="1"
+        value="{{C_TEMP}}"
+        readonly
+      />
+    </form>
+  </body>
 </html>
