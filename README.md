@@ -40,5 +40,5 @@ Extends the in-class hero Node.js example by using five npm packages to generate
 Improved the QR generator by validating URLs, fixing missing https, letting users pick PNG or SVG, saving output in an organized folder, preventing   overwrites, logging history, and showing a safety reminder. This project started from the Udemy QR Code Generator (Section 23.199). The original code asks the user for a URL, generates a QR image, and saves the URL into a text file. My manager asked me to make this code easier to use and safer.
 
 
-## Week 5 - 
+## Week 5 - ExpressJS
 
