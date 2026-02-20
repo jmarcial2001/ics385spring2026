@@ -53,7 +53,7 @@ The user enters the radius and height, and the application calculates the volume
 #### 3. Code Review
 Review code and made notes.
 
-## Week 5 - ExpressJS
+## Week 5 - EJS and Pug
 
 #### 1. To-Do List Update
 
