@@ -51,3 +51,11 @@ A volume calculator for a cylinder.
 The user enters the radius and height, and the application calculates the volume using: Volume = π × r² × h
 
 #### 3. Code Review
+Review code and made notes.
+
+## Week 5 - ExpressJS
+
+#### 1. To-Do List Update
+
+#### 2. Random Course Generator
+
