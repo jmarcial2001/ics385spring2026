@@ -4,9 +4,3 @@ The server selects a random course ID and course name, then renders it on the pa
 - Node.js
 - Express
 - EJS
-### How to Run (CodeSandBox)
-1. Navigate to the project folder
-2. Run:
-npm install
-npm run start
-The app runs on port 3000 (or the environment port).
