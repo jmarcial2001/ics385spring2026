@@ -20,6 +20,12 @@ async function loadCSVData() {
 
         // Fetch the CSV file
         const response = await fetch('data.csv');
+
+        // Added validation to ensure the CSV file loads successfully before parsing
+        if (!response.ok) {
+            throw new Error('Failed to fetch data.csv');
+        }
+
         const csvText = await response.text();
 
         // Parse CSV
@@ -45,15 +51,16 @@ async function loadCSVData() {
 function processData(data) {
     tourismData = [];
 
+    // Trim values to prevent whitespace inconsistencies from CSV input
     data.forEach(row => {
-        const group = row.Group || '';
+        const group = (row.Group || '').trim();
 
         // Skip footer/metadata rows and empty rows
         if (!group || SKIP_KEYWORDS.some(keyword => group.includes(keyword))) {
             return;
         }
 
-        const indicator = row.Indicator || '';
+        const indicator = (row.Indicator || '').trim();
         const units = row.Units || 'days';
 
         // Extract yearly data
@@ -69,7 +76,8 @@ function processData(data) {
                 }
             }
         });
-
+        // Sort yearly data chronologically to ensure correct statistics and chart display
+        yearlyData.sort((a, b) => Number(a.year) - Number(b.year));
         if (yearlyData.length > 0) {
             tourismData.push({
                 group,
