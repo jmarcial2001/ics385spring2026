@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "courseCode": "ICS 385",
+    "title": "Web Development and Administration",
+    "instructor": "Professor Debasis",
+    "credits": 3,
+    "campus": "Maui",
+    "category": "Technology"
+  },
+  {
+    "id": 2,
+    "courseCode": "ICS 360",
+    "title": "Database and Design",
+    "instructor": "Professor Vince",
+    "credits": 3,
+    "campus": "Maui",
+    "category": "Technology"
+  },
+  {
+    "id": 3,
+    "courseCode": "ENG 316",
+    "title": "Advanced Writing",
+    "instructor": "Professor Emma",
+    "credits": 3,
+    "campus": "Maui",
+    "category": "English"
+  }
+]
