@@ -18,4 +18,13 @@ README description: This URL returns JSON data from the NOAA Weather API.
 
 # Week 9c Weather API
 
-open weather API project
+Open weather API project
+- user enters a latitude and longitude
+
+Info Display
+- Description
+- Temperature
+- Icon
+- Humidity
+- Wind Speed
+- Cloudiness
