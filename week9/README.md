@@ -12,3 +12,8 @@ URL for Maui: https://api.weather.gov/alerts/active?zone=HIC009
 
 
 README description: This URL returns JSON data from the NOAA Weather API.
+
+
+
+
+Week 9 weather project
