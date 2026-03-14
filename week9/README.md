@@ -1,4 +1,4 @@
-# Week 9b NOAA API
+# Week 9b NOAA API 
 
 NOAA Weather Alert URL for Hawaii: https://api.weather.gov/alerts/active?area=HI
 
@@ -12,3 +12,10 @@ URL for Maui: https://api.weather.gov/alerts/active?zone=HIC009
 
 
 README description: This URL returns JSON data from the NOAA Weather API.
+
+
+
+
+# Week 9c Weather API
+
+open weather API project
