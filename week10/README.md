@@ -37,3 +37,6 @@ week10/
     ├── package.json
     ├── package-lock.json
     └── seed.js
+
+
+![MongoDB Atlas Screenshot](images/week10-atlas-screenshot2.png)
