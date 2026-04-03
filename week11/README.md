@@ -1,0 +1,2 @@
+## Week 11 PyMongo 
+ Script connects to MongoDB, creates/uses the Customer collection, deletes old records, inserts 3 customer records, updates one email and one phone number, queries one customer by last name and another by first name, and finally drops the collection. 
