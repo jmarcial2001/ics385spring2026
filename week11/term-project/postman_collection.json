@@ -1,0 +1,71 @@
+{
+  "info": {
+    "_postman_id": "c758f30a-a0a0-4b23-aaac-beedaa4bbf88",
+    "name": "Week 11 Properties Routes",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52285702",
+    "_collection_link": "https://go.postman.co/collection/52285702-c758f30a-a0a0-4b23-aaac-beedaa4bbf88?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "GET All Properties",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Property By ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties/69d37259f544092e2408aa8d",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties",
+            "69d37259f544092e2408aa8d"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Add Review",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/properties/69d37259f544092e2408aa8d/reviews",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "properties",
+            "69d37259f544092e2408aa8d",
+            "reviews"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
