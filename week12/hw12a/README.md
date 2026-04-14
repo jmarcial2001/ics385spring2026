@@ -1,0 +1,3 @@
+## Hawaii Island Cards
+
+This project is a React Basics assignment called Hawaii Island Cards. I built a small multi-component React app that displays three Hawaiian islands using JSX, functional components, props, and ES6 modules. The island cards are rendered from an array using the .map() method, and basic styling was added to improve presentation. AI tools were used for planning, code support, and explanation, but I reviewed and understood the final code before submitting.

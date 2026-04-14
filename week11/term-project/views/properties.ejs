@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii Properties</title>
+</head>
+<body>
+  <h1>Hawaii Hospitality Properties</h1>
+
+  <% properties.forEach(function(prop) { %>
+    <div>
+      <h2><%= prop.name %></h2>
+      <p><strong>ID:</strong> <%= prop._id %></p>
+      <p>Island: <%= prop.island %></p>
+      <p>Type: <%= prop.type %></p>
+      <p><%= prop.description %></p>
+      <p>Reviews: <%= prop.reviews.length %></p>
+    </div>
+    <hr>
+  <% }); %>
+</body>
+</html>
