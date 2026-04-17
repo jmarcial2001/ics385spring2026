@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f8fb;
+  color: #222;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+select {
+  display: block;
+  margin: 0 auto 25px auto;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.island-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding-bottom: 15px;
+}
+
+.island-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.island-card h2 {
+  margin: 15px 15px 8px 15px;
+  font-size: 22px;
+}
+
+.island-card p {
+  margin: 8px 15px;
+}
+
+.island-card span {
+  display: inline-block;
+  margin: 8px 15px;
+  padding: 6px 10px;
+  background-color: #0077b6;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.summary-card {
+  margin: 30px auto 0 auto;
+  max-width: 300px;
+  background: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-weight: bold;
+}
