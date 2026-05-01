@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HW15-A Google OAuth</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    a, button {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: none;
+      background-color: #1a73e8;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>HW15-A Google OAuth Demo</h1>
+    <p>This small Express app demonstrates signing in with Google using Passport.js.</p>
+
+    <% if (user) { %>
+      <p class="status">You are currently signed in as <strong><%= user.email %></strong>.</p>
+      <a href="/profile">Go to Profile</a>
+    <% } else { %>
+      <a href="/auth/google">Sign in with Google</a>
+    <% } %>
+  </div>
+</body>
+</html>

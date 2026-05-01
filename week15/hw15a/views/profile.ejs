@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .info {
+      background-color: #f7f7f7;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: none;
+      background-color: #d93025;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Profile Page</h1>
+    <p>This page is protected. Only signed-in users can view it.</p>
+
+    <div class="info">
+      <strong>Email:</strong> <%= user.email %>
+    </div>
+
+    <div class="info">
+      <strong>Display Name:</strong> <%= user.displayName %>
+    </div>
+
+    <div class="info">
+      <strong>Mongoose ID:</strong> <%= user._id %>
+    </div>
+
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</body>
+</html>
